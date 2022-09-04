@@ -3,4 +3,5 @@ from django.http import HttpResponse
 
 # Create your views here.
 def showroom(request):
-  return HttpResponse('Hi there')
+  context = {}
+  return render(request, 'showroom/showroom.html', context)
