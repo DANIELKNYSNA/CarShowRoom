@@ -1,0 +1,31 @@
+</html>
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Django Tailwind</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% tailwind_css %}
+</head>
+
+<body class="bg-slate-600 font-serif leading-normal tracking-normal">
+  <nav style="height: 90px; background-color: grey;" class="items-center">
+    <ul style="height: 100%;" class="flex justify-end items-center w-full">
+      <li style="margin: 1rem; color: rgb(243, 242, 242); font-size: 24px"><a href="/">Home</a></li>
+      <li style="margin: 1rem; color: rgb(243, 242, 242); font-size: 24px"><a href="/">About</a></li>
+      <li style="margin: 1rem; color: rgb(243, 242, 242); font-size: 24px"><a href="/">Finance</a></li>
+      <li style="margin: 1rem; color: rgb(243, 242, 242); font-size: 24px"><a href="/">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="container mx-auto">
+    {% block content %}
+
+    {% endblock content%}
+
+  </div>
+</body>
+
+</html>
